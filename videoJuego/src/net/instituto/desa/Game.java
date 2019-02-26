@@ -1,20 +1,24 @@
 package net.instituto.desa;
 
 public class Game {
-	Jugador j;
+	private static final String ABAJO = "Abajo";
+	private static final String ARRIBA = "Arriba";
+	private static final String IZQUIERDA = "Izquierda";
+	private static final String DERECHA = "Derecha";
+	//Jugador j;
 
-	public void movimiento(String m) {
-		if (m.equalsIgnoreCase("Derecha")) {
-			j.setX(j.getX() + 1);
+	public static void movimiento(String m) {
+		if (m.equalsIgnoreCase(DERECHA)) {
+			Jugador.derecha();
 		}
-		if (m.equalsIgnoreCase("Izquierda")) {
-			j.setX(j.getX() - 1);
+		if (m.equalsIgnoreCase(IZQUIERDA)) {
+			Jugador.izquierda();
 		}
-		if (m.equalsIgnoreCase("Arriba")) {
-			j.setY(j.getY() - 1);
+		if (m.equalsIgnoreCase(ARRIBA)) {
+			Jugador.arriba();
 		}
-		if (m.equalsIgnoreCase("Abajo")) {
-			j.setY(j.getY() + 1);
+		if (m.equalsIgnoreCase(ABAJO)) {
+			Jugador.abajo();
 		}
 	}
 }
